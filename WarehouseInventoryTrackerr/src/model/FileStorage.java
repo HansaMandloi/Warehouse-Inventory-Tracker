@@ -18,7 +18,7 @@ public class FileStorage {
 			}
 			System.out.println("💾 Inventory saved to file!");
 		} catch (IOException e) {
-			System.out.println("❌ Error saving inventory: " + e.getMessage());
+			System.out.println(" Error saving inventory: " + e.getMessage());
 		}
 	}
 
@@ -35,9 +35,9 @@ public class FileStorage {
 				if (p != null)
 					inventory.put(p.getProductId(), p);
 			}
-			System.out.println("📂 Inventory loaded from file!");
+			System.out.println(" Inventory loaded from file!");
 		} catch (IOException e) {
-			System.out.println("❌ Error loading inventory: " + e.getMessage());
+			System.out.println(" Error loading inventory: " + e.getMessage());
 		}
 		return inventory;
 	}
