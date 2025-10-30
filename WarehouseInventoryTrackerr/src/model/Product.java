@@ -40,7 +40,7 @@ public class Product implements Serializable {
 		if (qty > 0 && qty <= quantity) {
 			this.quantity -= qty;
 		} else {
-			throw new IllegalArgumentException("❌ Insufficient stock for " + name);
+			throw new IllegalArgumentException(" Insufficient stock for " + name);
 		}
 	}
 
