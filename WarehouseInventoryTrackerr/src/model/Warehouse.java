@@ -22,7 +22,7 @@ public class Warehouse {
 
     public void addProduct(Product product) {
         inventory.put(product.getProductId(), product);
-        System.out.println("✅ Added product: " + product.getName());
+        System.out.println(" Added product: " + product.getName());
         storage.saveInventory(inventory);
     }
 
@@ -31,11 +31,11 @@ public class Warehouse {
         try {
             Product p = inventory.get(productId);
             if (p == null) {
-                System.out.println("❌ Product not found: " + productId);
+                System.out.println(" Product not found: " + productId);
                 return;
             }
             p.increaseStock(qty);
-            System.out.println("📦 Received shipment: +" + qty + " units of " + p.getName());
+            System.out.println(" Received shipment: +" + qty + " units of " + p.getName());
             storage.saveInventory(inventory);
         } finally {
             lock.unlock();
@@ -47,7 +47,7 @@ public class Warehouse {
         try {
             Product p = inventory.get(productId);
             if (p == null) {
-                System.out.println("❌ Product not found: " + productId);
+                System.out.println(" Product not found: " + productId);
                 return;
             }
             try {
